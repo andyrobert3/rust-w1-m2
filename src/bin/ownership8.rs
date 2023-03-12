@@ -4,6 +4,6 @@ fn main() {
     println!("a is {} ", a); // (3) works!
 }
 fn add_d(x: &mut String) {
-    println!("do_something received {} ", x);
+    println!("do_something received ptr: {:p}, value: {}", x, *x);
     *x = "abcd".to_owned();
 } // (2) scope end, ownership is returned to main()
